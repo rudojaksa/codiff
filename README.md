@@ -10,7 +10,7 @@ Color diff that prints old and new lines with changed characters/words/blocks hi
 
 ### INSTALL:
 
-[`codiff`](codiff) is a standalone Perl script, just copy or download it and run.  Tested on Linux and macOS.  Requires `Algorithm::Diff`, usually already installed.
+[`codiff`](codiff) is a standalone Perl script, just copy or download it and run.  Don't forget `chmod +x`.  Tested on Linux and macOS.  Requires `Algorithm::Diff`, usually already installed.
 
 Direct link: https://raw.githubusercontent.com/rudojaksa/codiff/main/codiff
 
