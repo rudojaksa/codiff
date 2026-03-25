@@ -1,7 +1,7 @@
 PACKAGE := codiff
 VERSION := 0.1
 AUTHORS := R.Jaksa 2026 GPLv3
-SUBVERS	:= b
+SUBVERS	:= c
 
 SHELL	:= /bin/bash
 PATH	:= usr/bin:$(PATH)

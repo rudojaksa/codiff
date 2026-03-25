@@ -1,5 +1,5 @@
-# geometry: 88x13 (git diff)
-diff  --color topograph-0.1/tfmoto.pl topoviz-0.2/tfmoto.pl
-git diff  --word-diff=color --unified=0 topograph-0.1/tfmoto.pl topoviz-0.2/tfmoto.pl
-ccdiff --bg=none topograph-0.1/tfmoto.pl topoviz-0.2/tfmoto.pl
-codiff topograph-0.1/tfmoto.pl topoviz-0.2/tfmoto.pl 
+# geometry: 77x13 (git diff)
+diff --color a.pl b.pl
+git diff --word-diff=color --unified=0 a.pl b.pl
+ccdiff --bg=none a.pl b.pl
+codiff a.pl b.pl
