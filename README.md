@@ -12,6 +12,6 @@ Color diff that prints old and new lines with changed characters/words/blocks hi
 
 [`codiff`](codiff) is a standalone Perl script, just copy or download it and run.  Don't forget `chmod +x`.  Tested on Linux and macOS.  Requires `Algorithm::Diff`, usually already installed.
 
-Direct link: https://raw.githubusercontent.com/rudojaksa/codiff/main/codiff
+Direct link: [`curl -O https://raw.githubusercontent.com/rudojaksa/codiff/main/codiff`](https://raw.githubusercontent.com/rudojaksa/codiff/main/codiff)
 
 <br><div align=right><i>R.Jaksa 2026 GPLv3</i></div>
