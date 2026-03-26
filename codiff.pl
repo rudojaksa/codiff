@@ -67,4 +67,4 @@ exit if not defined $FILE1 or not defined $FILE2;
 # include inc/codiff.pl
 codiff $FILE1,$FILE2;
 
-# -------------------------------------------------------------------------------- R.Jaksa 2026 GPLv3
+# -------------------------------------------------------------------------- R.Jaksa 2026 GPLv3
