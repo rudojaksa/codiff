@@ -33,7 +33,7 @@ VERSION
 
 EOF
 
-# ---------------------------------------------------------------------------------------------- ARGV
+# ---------------------------------------------------------------------------------------- ARGV
 # include colors.pl array.pl printhelp.pl
 
 sub verbose { printf STDERR "$CC_%11s:$CD_ %s $CK_%s$CD_\n",$_[0],$_[1],$_[2] }
@@ -64,7 +64,7 @@ verbose "file 1",$FILE1 if $VERBOSE;
 verbose "file 2",$FILE2 if $VERBOSE;
 exit if not defined $FILE1 or not defined $FILE2;
 
-# include diffcolor.pl
-diffcolor $FILE1,$FILE2;
+# include inc/codiff.pl
+codiff $FILE1,$FILE2;
 
 # -------------------------------------------------------------------------------- R.Jaksa 2026 GPLv3

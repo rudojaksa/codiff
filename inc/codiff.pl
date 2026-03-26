@@ -1,4 +1,5 @@
-{ # -------------------------------------------------------------------------------------- COLOR DIFF 
+# codiff.pl generated from codiff-0.2/src/codiff.pl Mar 2026
+{ # -------------------------------------------------------------------------------- COLOR DIFF 
 # our $MODE=1;     # 1=char 2=word 3=block 0=line
 # our $ALL=0;      # 1=all_lines 0=only_changed
 # our $CONTEXT=4;  # 4 lines of context
@@ -45,7 +46,7 @@ my sub flush {
   printf "$CR_%${w}d$CD_ $CR_-$CD_ $CR_%s$CD_\n",$$i1++,$_ for @{$del}[$pairs..$#$del];
   printf "$CG_%${w}d$CD_ $CG_+$CD_ $CG_%s$CD_\n",$$i2++,$_ for @{$add}[$pairs..$#$add]; }
 
-our sub diffcolor {
+our sub codiff {
   my ($file1,$file2) = @_;
   my ($i1,$i2,@del,@add) = (0,0);
   my $w = length(int((-s $file1)/35)); # line-number length (guessed for average line width 35)
@@ -82,4 +83,4 @@ our sub diffcolor {
 # + elsif(/^\+(.*)/) { my $a=$1; $a=~s/\h*#.*//; push @add,$a }
 # use this to handle full-line comments (as preprocess)
 # diff -u0 -I '^\s*#' FILE1 FILE2
-} # ------------------------------------------------------------------------------ R.Jaksa 2026 GPLv3
+} # ------------------------------------------------------------------------ R.Jaksa 2026 GPLv3
