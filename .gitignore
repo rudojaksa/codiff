@@ -1,3 +1,4 @@
+*.bkp
 .*.version
 .*.pl
 a.pl

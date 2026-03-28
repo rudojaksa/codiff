@@ -6,6 +6,10 @@ codiff
 
 Color diff that prints old and new lines with changed characters/words/blocks highlighted.  It streams the GNU diff output line by line, coloring it on the fly.  
 
+If either file is a directory, it recursively searches for a corresponding file within that directory. GNU diff on Linux also supports file-vs-directory comparison by matching the filename within the directory, but without recursion.
+
+If the second file is omitted, it recursively searches the current working directory for a corresponding file.
+
 <a href=doc/codiff.png><img width=640px src=doc/codiff.png></a>
 
 ### INSTALL:

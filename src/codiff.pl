@@ -5,6 +5,8 @@
 # our $NOBLANK=1;  # ignore blank lines
 # our $ANYSPACE=1; # any space width
 # our $NOSPACES=1; # ignore spaces
+# TODO: option for "NUM1 -> NUM2" linenumbers instead of just "NUM"
+# TODO: maybe +/- is not necessary
 
 # use Algorithm::Diff qw(sdiff); ...choose XS version if available
 eval  { require Algorithm::Diff::XS; Algorithm::Diff::XS->import(qw(sdiff)) }
@@ -58,7 +60,8 @@ our sub codiff {
      $o.= " -b" if $ANYSPACE;
      $o.= " -w" if $NOSPACES;
   my $cmd = "diff $o -- \Q$file1\E \Q$file2\E";
-  if($VERBOSE and defined &verbose) { verbose "call","$CM_$cmd$CD_"; print "\n" }
+  my $cmx = "diff $o -- $file1 $file2"; # for verbose printout # TODO: quoting if needed
+  if($VERBOSE and defined &verbose) { verbose "call","$CM_$cmx$CD_"; print "\n" }
   open my $fh,"$cmd |";
 
   while (<$fh>) {

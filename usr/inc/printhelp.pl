@@ -1,6 +1,6 @@
-# printhelp.pl generated from helpman-0.4/src/printhelp.pl 2025-12-26
+# printhelp.pl generated from helpman-0.4/src/printhelp.pl 2026-03-28
 { # PRINT A MAN-STYLE HELP
-  # require colors.pl
+  # require colors/base.pl
 
 our sub printhelp {
   my $help = $_[0];
@@ -13,12 +13,8 @@ our sub printhelp {
   my ($L,$R) = ("\#\#\>","\<\#\#");	# private left/right brace
   my sub REP { return "$L$_[0]$R"; }	# return complete private substitution identifier
 
-  # PREPROCESSOR
-
   $help =~ s/(\n\#.*)*\n/\n/g;		# skip commented-out lines
   $help =~ s/\\\)/REP "brc2"/eg;	# save escaped bracket
-
-  # PARSER
 
   # C[RGYBMCWKD](text) <- color text
   my $colors = "RGYBMCWKD";
@@ -39,8 +35,6 @@ our sub printhelp {
 
   # plain uppercase words, like sections headers
   $STR{$id++}=$2 while $help =~ s/(\n|[ \t])(([A-Z_\/-]+[ ]?){4,})/$1.REP("pl$id")/e;
-
-  # PROCESSOR
 
   # re-substitute
   $help =~ s/${L}pl([0-9]+)$R/$CC_$STR{$1}$CD_/g;	# plain uppercase words
@@ -63,8 +57,6 @@ our sub printhelp {
 
   # escapes
   $help =~ s/${L}brc2$R/)/g;
-
-  # POSTPROCESSOR
 
   # star bullets
   $help =~ s/\n(\h\h+)\* /\n$1$CC_\*$CD_ /g;

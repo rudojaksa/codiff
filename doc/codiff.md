@@ -8,6 +8,10 @@ codiff - color word/character diff
 Compare two files and highlight changed characters, words or blocks.
 Streams and colors GNU diff output on the fly.
 
+If either FILE1 or FILE2 is a directory, it recursively searches for
+corresponding file within that directory.  If FILE2 is omitted, it
+searches the CWD recursively for a corresponding file.
+
 ### OPTIONS
           -h  This help.
           -v  Verbose.
@@ -27,5 +31,5 @@ Streams and colors GNU diff output on the fly.
       removed and new word added.
 
 ### VERSION
-codiff-0.2 R.Jaksa 2026 GPLv3 built Mar 2026
+codiff-0.3 R.Jaksa 2026 GPLv3 built Mar 2026
 
